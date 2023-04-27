@@ -31,13 +31,11 @@ app.use(authRoutes);
 app.use(productRoutes);
 app.use(adminRouters);
 // app.use(orderRoutes);
-const port = process.env.PORT || 5000;
+
 mongoose
   .connect(urlmongo)
   .then((result) => {
-    app.listen(port, () => {
-      console.log(`listening${port}`);
-    });
+    app.listen(5000);
   })
   .catch((err) => {
     console.log(err);
